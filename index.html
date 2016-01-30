@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Test</title>
+
+    <!-- Bootstrap -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/base.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-center">
+          <a class="navbar-title" href="#">biocalc</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container main-container">
+      <div class="center-col">
+
+        <!-- NA type toggle -->
+        <h5>NA Type</h5>
+        <div id="na-input-type" class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="na-type-dsdna" data-na-val=0 autocomplete="off" checked>dsDNA
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="na-type-ssdna" data-na-val=1 autocomplete="off" checked>ssDNA
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="na-type-rna" data-na-val=2 autocomplete="off"> RNA
+          </label>
+        </div>
+
+        <!-- Input type toggle -->
+        <h5>Input Units</h5>
+        <div id="na-input-units" class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="input-type-ngul" autocomplete="off" data-na-val=0 checked>ng/ul
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="input-type-pM" autocomplete="off" data-na-val=1 checked>pM
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="input-type-nM" autocomplete="off" data-na-val=2 checked>nM
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" data-na-val=3 name="options" id="input-type-mM" autocomplete="off">uM
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" data-na-val=4 name="options" id="input-type-mM" autocomplete="off">mM
+          </label>
+        </div>
+
+        <!-- Input quantity -->
+        <h5>Input Value</h5>
+        <input id="na-input-value" type="number" class="form-control" id="input-val" placeholder=0>
+
+        <!-- Input length -->
+        <h5>Input Length (bp)</h5>
+        <input id="na-input-length"type="number" class="form-control" id="input-length" placeholder=0>
+
+        <!-- Output -->
+        <div class="well" style="margin-top:10px">
+          <div class="input-group">
+            <input type="text" class="form-control" id="output-ng-ul" placeholder=0 disabled>
+            <div class="input-group-addon">ng/ul</div>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" id="output-pm" placeholder=0 disabled>
+            <div class="input-group-addon">pM</div>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" id="output-nm" placeholder=0 disabled>
+            <div class="input-group-addon">nM</div>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" id="output-um" placeholder=0 disabled>
+            <div class="input-group-addon">uM</div>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" id="output-mm" placeholder=0 disabled>
+            <div class="input-group-addon">mM</div>
+          </div>
+          <i>Note: uM = pmol/ul</i>
+        </div>
+
+        <!-- Final type toggle -->
+        <h5>Final Units</h5>
+        <div id="na-final-units" class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="input-type-ngul" data-na-val=0 autocomplete="off" checked>ng/ul
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="input-type-pM" data-na-val=1 autocomplete="off" checked>pM
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="input-type-nM" data-na-val=2 autocomplete="off" checked>nM
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="input-type-mM" data-na-val=3 autocomplete="off">uM
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="input-type-mM" data-na-val=4 autocomplete="off">mM
+          </label>
+        </div>
+
+        <!-- Final value -->
+        <h5>Final value</h5>
+        <input  id="na-final-value" type="number" class="form-control" id="final-value" placeholder=0>
+        <h5>Final volume (ul)</h5>
+        <input id="na-final-volume" type="number" class="form-control" id="final-volume" placeholder=0>
+        <div class="well" style="margin-top:10px">
+          <div class="input-group">
+            <input type="text" class="form-control" id="final-vol-input" placeholder=0 disabled>
+            <div class="input-group-addon">Volume NA (ul)</div>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" id="final-vol-diluent" placeholder=0 disabled>
+            <div class="input-group-addon">Volume diluent (ul)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

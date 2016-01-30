@@ -1,0 +1,25 @@
+.navbar-title {
+  color: #9d9d9d;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+  display:inline-block;
+}
+
+.navbar-center {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-container {
+  padding-top: 75px;
+}
+
+.center-col {
+  max-width:300px;
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
